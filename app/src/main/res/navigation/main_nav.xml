@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/mainNav" app:startDestination="@id/dashboardFragment">
+    <fragment android:id="@+id/dashboardFragment" android:name="com.mohnishraj.goldmineledger.DashboardFragment" android:label="Home"/>
+    <fragment android:id="@+id/transactionsFragment" android:name="com.mohnishraj.goldmineledger.TransactionsFragment" android:label="Activity"/>
+    <fragment android:id="@+id/reportsFragment" android:name="com.mohnishraj.goldmineledger.ReportsFragment" android:label="Insights"/>
+    <fragment android:id="@+id/moreFragment" android:name="com.mohnishraj.goldmineledger.MoreFragment" android:label="More"/>
+    <fragment android:id="@+id/accountsFragment" android:name="com.mohnishraj.goldmineledger.AccountsFragment" android:label="Accounts"/>
+    <fragment android:id="@+id/categoriesFragment" android:name="com.mohnishraj.goldmineledger.CategoriesFragment" android:label="Categories"/>
+    <fragment android:id="@+id/settingsFragment" android:name="com.mohnishraj.goldmineledger.SettingsFragment" android:label="Settings"/>
+    <fragment android:id="@+id/recurringFragment" android:name="com.mohnishraj.goldmineledger.RecurringFragment" android:label="Recurring"/>
+    <fragment android:id="@+id/budgetsFragment" android:name="com.mohnishraj.goldmineledger.BudgetsFragment" android:label="Budgets"/>
+    <fragment android:id="@+id/calendarFragment" android:name="com.mohnishraj.goldmineledger.CalendarFragment" android:label="Calendar"/>
+    <fragment android:id="@+id/planningHubFragment" android:name="com.mohnishraj.goldmineledger.PlanningHubFragment" android:label="Planning centre"/>
+    <fragment android:id="@+id/wealthHubFragment" android:name="com.mohnishraj.goldmineledger.WealthHubFragment" android:label="Wealth centre"/>
+    <fragment android:id="@+id/workspaceFragment" android:name="com.mohnishraj.goldmineledger.WorkspaceFragment" android:label="Workspace">
+        <argument android:name="workspace_type" app:argType="string" android:defaultValue="PLANNED_PAYMENT"/>
+    </fragment>
+    <fragment android:id="@+id/netWorthFragment" android:name="com.mohnishraj.goldmineledger.NetWorthFragment" android:label="Net worth"/>
+    <fragment android:id="@+id/forecastFragment" android:name="com.mohnishraj.goldmineledger.ForecastFragment" android:label="Cash-flow outlook"/>
+    <fragment android:id="@+id/dataToolsFragment" android:name="com.mohnishraj.goldmineledger.DataToolsFragment" android:label="Data vault"/>
+</navigation>

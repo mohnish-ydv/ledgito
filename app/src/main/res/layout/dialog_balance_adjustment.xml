@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="4dp">
+
+    <TextView
+        android:id="@+id/summary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/on_surface_variant" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amountLayout"
+        style="@style/Widget.Ledgerly.TextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:hint="Correct current balance">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amountInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal|numberSigned" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reasonLayout"
+        style="@style/Widget.Ledgerly.TextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Reason">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/reasonInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="180"
+            android:maxLines="3" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Ledgito records the difference as a dated adjustment transaction, so reports and audit history remain consistent."
+        android:textAppearance="?attr/textAppearanceBodySmall"
+        android:textColor="@color/on_surface_variant" />
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:paddingHorizontal="20dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:title="Money rhythm"
+        app:subtitle="Recurring entries without duplicate surprises"
+        app:navigationIcon="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/overviewCard"
+        style="@style/Widget.Ledgerly.Card.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_hero_balance"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UPCOMING AUTOMATION"
+                android:textAppearance="@style/TextAppearance.Ledgerly.Eyebrow"
+                android:textColor="@color/hero_muted" />
+
+            <TextView
+                android:id="@+id/dueCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Nothing due today"
+                android:textAppearance="@style/TextAppearance.Material3.HeadlineSmall"
+                android:textColor="@color/hero_text" />
+
+            <TextView
+                android:id="@+id/activeCount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="0 active rules"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColor="@color/hero_muted" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/postDue"
+                style="@style/Widget.Material3.Button.TonalButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Review and post due"
+                app:icon="@drawable/ic_repeat"
+                app:backgroundTint="@color/secondary_container"
+                app:iconTint="@color/on_secondary_container"
+                android:textColor="@color/on_secondary_container" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Your recurring rules"
+        android:textAppearance="@style/TextAppearance.Ledgerly.Section"
+        app:layout_constraintTop_toBottomOf="@id/overviewCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="6dp"
+        android:paddingBottom="104dp"
+        app:layout_constraintTop_toBottomOf="@id/listTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+    <LinearLayout
+        android:id="@+id/empty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="28dp"
+        android:background="@drawable/bg_surface_pill"
+        app:layout_constraintTop_toTopOf="@id/list"
+        app:layout_constraintBottom_toBottomOf="@id/list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="↻"
+            android:textSize="34sp"
+            android:textColor="@color/primary" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Build a predictable money rhythm"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Add rent, salary, subscriptions or transfers and stay in control of when they post."
+            android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:textColor="@color/on_surface_variant" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New rule"
+        app:icon="@drawable/ic_add"
+        android:layout_margin="18dp"
+        app:backgroundTint="@color/primary"
+        app:iconTint="@color/on_primary"
+        android:textColor="@color/on_primary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

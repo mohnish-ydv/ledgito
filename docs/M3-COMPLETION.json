@@ -1,0 +1,37 @@
+{
+  "product": "Ledgerly",
+  "milestone": "M3.3",
+  "focus": "Visual Intelligence stability and GitHub compiler fix",
+  "versionCode": 6,
+  "versionName": "0.3.3-m3.3-lint-final",
+  "databaseVersion": 2,
+  "buildArtifact": "Ledgerly-M3.3-Lint-Final.apk",
+  "internetPermission": false,
+  "destructiveMigration": false,
+  "referencePagesReviewed": 17,
+  "roadmapPreviewCount": 17,
+  "liveRootDestinations": [
+    "Home",
+    "Activity",
+    "Insights",
+    "More"
+  ],
+  "theme": "Obsidian Aurora",
+  "privacyMasking": true,
+  "fullHeightRoadmapPreviews": true,
+  "redesignedLiveSurfaces": [
+    "Onboarding",
+    "Home",
+    "Activity",
+    "Transaction editor",
+    "Accounts",
+    "Categories",
+    "Insights",
+    "Budgets",
+    "Recurring",
+    "Calendar",
+    "Settings",
+    "More"
+  ],
+  "compilerBlockerFixed": "LedgerViewModel SettingsRepository property scope"
+}

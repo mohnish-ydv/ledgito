@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/surface"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="28dp">
+
+    <View android:layout_width="38dp" android:layout_height="4dp" android:layout_gravity="center_horizontal" android:background="@drawable/bg_sheet_handle" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="18dp" android:text="Customise Home" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Keep the sections that matter to you. Your balance and quick actions always stay visible." android:textColor="@color/on_surface_variant" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/pulseSwitch" android:layout_width="match_parent" android:layout_height="56dp" android:layout_marginTop="14dp" android:checked="true" android:text="Monthly pulse and trend" />
+    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/budgetSwitch" android:layout_width="match_parent" android:layout_height="56dp" android:checked="true" android:text="Budget pulse" />
+    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/planSwitch" android:layout_width="match_parent" android:layout_height="56dp" android:checked="true" android:text="Planning and wealth" />
+    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/recentSwitch" android:layout_width="match_parent" android:layout_height="56dp" android:checked="true" android:text="Recent activity" />
+    <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/recurringSwitch" android:layout_width="match_parent" android:layout_height="56dp" android:checked="true" android:text="Planned money" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/saveButton"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="14dp"
+        android:text="Save Home layout" />
+</LinearLayout>

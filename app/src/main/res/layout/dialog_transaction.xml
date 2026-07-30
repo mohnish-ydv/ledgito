@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_hero_balance"
+            android:padding="18dp">
+
+            <View
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="-36dp"
+                android:layout_marginEnd="-28dp"
+                android:background="@drawable/bg_hero_orb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/typeLayout"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Transaction type"
+                    app:boxBackgroundColor="@color/white_12"
+                    app:boxStrokeColor="@color/hero_muted"
+                    app:hintTextColor="@color/hero_muted">
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                        android:id="@+id/typeInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/hero_text" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/amountLayout"
+                    style="@style/Widget.Material3.TextInputLayout.FilledBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:hint="Amount"
+                    app:boxBackgroundColor="@color/white_12"
+                    app:boxStrokeColor="@color/hero_muted"
+                    app:hintTextColor="@color/hero_muted">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/amountInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/hero_text"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Money route"
+            android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/accountLayout"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Account">
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView android:id="@+id/accountInput" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/destinationLayout"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Destination account">
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView android:id="@+id/destinationInput" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/receivedAmountLayout"
+                    style="@style/Widget.Ledgerly.TextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Amount received"
+                    android:visibility="gone">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/receivedAmountInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/transferFeeLayout"
+                    style="@style/Widget.Ledgerly.TextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Transfer fee (optional)"
+                    android:visibility="gone">
+                    <com.google.android.material.textfield.TextInputEditText android:id="@+id/transferFeeInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/categoryLayout"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Category">
+                    <com.google.android.material.textfield.MaterialAutoCompleteTextView android:id="@+id/categoryInput" android:layout_width="match_parent" android:layout_height="wrap_content" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/splitSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Split across categories" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/splitButton"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Manage split lines"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/splitSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBodySmall"
+                    android:textColor="@color/on_surface_variant"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Details"
+            android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/dateLayout" style="@style/Widget.Ledgerly.TextInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Date"><com.google.android.material.textfield.TextInputEditText android:id="@+id/dateInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:clickable="true" android:focusable="false" /></com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/payeeLayout" style="@style/Widget.Ledgerly.TextInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Payee or title"><com.google.android.material.textfield.TextInputEditText android:id="@+id/payeeInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLength="80" /></com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/noteLayout" style="@style/Widget.Ledgerly.TextInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Note"><com.google.android.material.textfield.TextInputEditText android:id="@+id/noteInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLength="500" android:minLines="2" /></com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.textfield.TextInputLayout android:id="@+id/tagsLayout" style="@style/Widget.Ledgerly.TextInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Tags separated by commas"><com.google.android.material.textfield.TextInputEditText android:id="@+id/tagsInput" android:layout_width="match_parent" android:layout_height="wrap_content" /></com.google.android.material.textfield.TextInputLayout>
+                <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/clearedSwitch" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:checked="true" android:text="Cleared — include in balances" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:text="Receipt &amp; files" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                <com.google.android.material.button.MaterialButton android:id="@+id/attachmentButton" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Attach receipt, image or PDF" app:icon="@drawable/ic_attachment" />
+                <TextView android:id="@+id/attachmentSummary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="No new attachments" android:textAppearance="?attr/textAppearanceBodySmall" android:textColor="@color/on_surface_variant" />
+                <com.google.android.material.materialswitch.MaterialSwitch android:id="@+id/removeAttachmentsSwitch" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Remove existing attachments" android:visibility="gone" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

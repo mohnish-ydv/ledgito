@@ -1,0 +1,353 @@
+[
+  {
+    "id": "ONB-001",
+    "name": "Guided first-run setup",
+    "module": "Onboarding",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Explains accounts, first transaction and first budget with optional sample data."
+  },
+  {
+    "id": "ONB-002",
+    "name": "Setup checklist",
+    "module": "Onboarding",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Dismissible checklist remains until essential setup is complete."
+  },
+  {
+    "id": "ACC-001",
+    "name": "Unlimited local accounts",
+    "module": "Accounts",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Core",
+    "definition": "Cash, bank, wallet, credit card and custom types."
+  },
+  {
+    "id": "ACC-002",
+    "name": "Opening balance and adjustment history",
+    "module": "Accounts",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Adjustments require reason and preserve audit trail."
+  },
+  {
+    "id": "TXN-001",
+    "name": "Income and expense records",
+    "module": "Transactions",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Core",
+    "definition": "Fast entry with category, merchant, tags and note."
+  },
+  {
+    "id": "TXN-002",
+    "name": "Split transactions",
+    "module": "Transactions",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "One payment can be divided across categories."
+  },
+  {
+    "id": "TXN-003",
+    "name": "Undo deletion and edit history",
+    "module": "Transactions",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Protects against accidental data loss."
+  },
+  {
+    "id": "TRF-001",
+    "name": "Account transfers",
+    "module": "Transfers",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Atomic linked transfer that never counts as income or expense."
+  },
+  {
+    "id": "TRF-002",
+    "name": "Transfer fees and cross-currency received amount",
+    "module": "Transfers",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Fee is recorded separately; received amount can differ."
+  },
+  {
+    "id": "REC-001",
+    "name": "Recurring transactions",
+    "module": "Recurring",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Automatic or reminder-first schedules."
+  },
+  {
+    "id": "REC-002",
+    "name": "Month-end and missed-run recovery",
+    "module": "Recurring",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Prevents skipped or duplicate monthly entries."
+  },
+  {
+    "id": "BUD-001",
+    "name": "Monthly budgets that persist across months",
+    "module": "Budgets",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Each period is generated and calculated independently."
+  },
+  {
+    "id": "BUD-002",
+    "name": "Weekly, yearly and custom-period budgets",
+    "module": "Budgets",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Custom start/end dates and repeat rules."
+  },
+  {
+    "id": "BUD-003",
+    "name": "Carry-over modes",
+    "module": "Budgets",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Off, positive only, or full carry-over."
+  },
+  {
+    "id": "REP-001",
+    "name": "Six-month and yearly views",
+    "module": "Reports",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Included in free core."
+  },
+  {
+    "id": "REP-002",
+    "name": "Custom date-range reports",
+    "module": "Reports",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "User chooses any inclusive range."
+  },
+  {
+    "id": "REP-003",
+    "name": "Day/week/month/quarter/all-time views",
+    "module": "Reports",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Consistent period selector."
+  },
+  {
+    "id": "CAL-001",
+    "name": "Calendar date navigation",
+    "module": "Navigation",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Jump directly to a date instead of tapping through every day."
+  },
+  {
+    "id": "SEA-001",
+    "name": "Advanced combined filters",
+    "module": "Search",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Account, category, tag, amount, date, attachment and status."
+  },
+  {
+    "id": "SEA-002",
+    "name": "Saved filters",
+    "module": "Search",
+    "release": "P1",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Store frequently used queries."
+  },
+  {
+    "id": "ATT-001",
+    "name": "Receipt and document attachments",
+    "module": "Attachments",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Images, PDFs and documents attached to each transaction."
+  },
+  {
+    "id": "ATT-002",
+    "name": "Attachment integrity scan",
+    "module": "Attachments",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Detects missing/corrupt files before backup."
+  },
+  {
+    "id": "BKP-001",
+    "name": "Complete local backup",
+    "module": "Backup",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Records, settings and attachments in one package."
+  },
+  {
+    "id": "BKP-002",
+    "name": "User-selected cloud-drive folder via Android picker",
+    "module": "Backup",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review root cause",
+    "definition": "Allows recovery after uninstall without an app account or paid server."
+  },
+  {
+    "id": "BKP-003",
+    "name": "Encrypted backup",
+    "module": "Backup",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "AES-GCM package protected by user passphrase."
+  },
+  {
+    "id": "RST-001",
+    "name": "Validated restore with preview and rollback",
+    "module": "Restore",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Never replaces current data until integrity checks pass."
+  },
+  {
+    "id": "EXP-001",
+    "name": "Reliable CSV export",
+    "module": "Export",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "Streaming export with completion report and failure recovery."
+  },
+  {
+    "id": "EXP-002",
+    "name": "Structured JSON export",
+    "module": "Export",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Complete portable representation excluding binary files."
+  },
+  {
+    "id": "IMP-001",
+    "name": "CSV import template",
+    "module": "Import",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Preview, field mapping and duplicate handling."
+  },
+  {
+    "id": "UI-001",
+    "name": "Simple stable interface",
+    "module": "UX",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Review request",
+    "definition": "No feature regression or forced redesign without compatibility path."
+  },
+  {
+    "id": "UI-002",
+    "name": "Dark and light themes",
+    "module": "UX",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Accessible contrast and system mode."
+  },
+  {
+    "id": "SEC-001",
+    "name": "Optional device-auth app lock",
+    "module": "Security",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Derived",
+    "definition": "Biometric/PIN delegated to Android."
+  },
+  {
+    "id": "MON-001",
+    "name": "No forced ads in critical flows",
+    "module": "Monetisation",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Cross-review lesson",
+    "definition": "No ads in add, edit, budget, backup or restore."
+  },
+  {
+    "id": "MON-002",
+    "name": "Core features never paywalled",
+    "module": "Monetisation",
+    "release": "P0",
+    "access": "Free",
+    "basis": "Cross-review lesson",
+    "definition": "History, filters, reports, backup and restore remain free."
+  },
+  {
+    "id": "PRO-001",
+    "name": "Advanced dashboard layouts",
+    "module": "Pro",
+    "release": "P1",
+    "access": "Lifetime Pro",
+    "basis": "Business decision",
+    "definition": "Convenience/customisation only."
+  },
+  {
+    "id": "PRO-002",
+    "name": "Advanced forecasting and comparison packs",
+    "module": "Pro",
+    "release": "P1",
+    "access": "Lifetime Pro",
+    "basis": "Business decision",
+    "definition": "Optional analytical depth, not basic history."
+  },
+  {
+    "id": "PRO-003",
+    "name": "Premium report themes and extra home widgets",
+    "module": "Pro",
+    "release": "P1",
+    "access": "Lifetime Pro",
+    "basis": "Business decision",
+    "definition": "Cosmetic/convenience value."
+  },
+  {
+    "id": "SYN-001",
+    "name": "Real-time multi-device sync",
+    "module": "Cloud",
+    "release": "P2",
+    "access": "Optional subscription",
+    "basis": "Future",
+    "definition": "Requires recurring infrastructure and privacy review."
+  },
+  {
+    "id": "FAM-001",
+    "name": "Shared household ledger",
+    "module": "Cloud",
+    "release": "P2",
+    "access": "Optional subscription",
+    "basis": "Future",
+    "definition": "Built only after sync foundation is sustainable."
+  }
+]

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="40dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back"
+            app:subtitle="Your records stay portable"
+            app:title="Data vault" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardBackgroundColor="@color/primary_container">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+                <TextView android:layout_width="52dp" android:layout_height="52dp" android:background="@drawable/bg_surface_pill" android:gravity="center" android:text="▣" android:textColor="@color/primary" android:textSize="24sp" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="14dp" android:text="Own every record" android:textAppearance="@style/TextAppearance.Ledgerly.Display" />
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:text="Back up the database and attachments, export readable files, restore with integrity checks, and use any Android document provider - including a cloud-drive app you already trust." android:textColor="@color/on_surface_variant" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Backup &amp; restore" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                <com.google.android.material.button.MaterialButton android:id="@+id/encryptedBackup" android:layout_width="match_parent" android:layout_height="52dp" android:text="Create encrypted full backup" app:icon="@drawable/ic_attachment" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/standardBackup" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp" android:text="Create standard full backup" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/restore" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="8dp" android:text="Validate and restore backup" />
+                <TextView android:id="@+id/backupStatus" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="No backup recorded yet" android:textColor="@color/on_surface_variant" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Portable exports" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/exportCsv" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_marginEnd="5dp" android:layout_weight="1" android:text="Export CSV" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/exportJson" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_marginStart="5dp" android:layout_weight="1" android:text="Export JSON" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/importCsv" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_marginEnd="5dp" android:layout_weight="1" android:text="Import CSV" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/csvTemplate" style="@style/Widget.Material3.Button.OutlinedButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_marginStart="5dp" android:layout_weight="1" android:text="CSV template" />
+                </LinearLayout>
+                <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:text="CSV import reports errors by row and skips exact duplicates. JSON is a readable structured export; full restore uses the backup format above." android:textColor="@color/on_surface_variant" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Health checks" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                <com.google.android.material.button.MaterialButton android:id="@+id/scanAttachments" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="match_parent" android:layout_height="52dp" android:text="Scan attachment integrity" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/diagnostics" style="@style/Widget.Material3.Button.TextButton" android:layout_width="match_parent" android:layout_height="48dp" android:layout_marginTop="6dp" android:text="View diagnostics" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

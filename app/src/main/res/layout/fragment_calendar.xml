@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:paddingHorizontal="20dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:title="Money calendar"
+        app:subtitle="See the story behind every day"
+        app:navigationIcon="@drawable/ic_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/calendarCard"
+        style="@style/Widget.Ledgerly.Card.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <CalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:dateTextAppearance="@style/TextAppearance.Material3.BodyMedium"
+            android:weekDayTextAppearance="@style/TextAppearance.Material3.LabelMedium"
+            android:focusedMonthDateColor="@color/on_surface"
+            android:unfocusedMonthDateColor="@color/on_surface_variant"
+            android:weekSeparatorLineColor="@android:color/transparent"
+            android:selectedWeekBackgroundColor="@color/primary_container" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dayCard"
+        style="@style/Widget.Ledgerly.Card.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_hero_balance"
+        app:cardBackgroundColor="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/calendarCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <TextView
+                android:id="@+id/dayTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Today"
+                android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+                android:textColor="@color/hero_text" />
+
+            <TextView
+                android:id="@+id/daySummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="No entries"
+                android:textAppearance="@style/TextAppearance.Material3.BodyMedium"
+                android:textColor="@color/hero_muted" />
+
+            <LinearLayout
+                android:id="@+id/actions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="14dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addExpense"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Expense"
+                    app:icon="@drawable/ic_add"
+                    app:backgroundTint="@color/expense_container"
+                    app:iconTint="@color/expense"
+                    android:textColor="@color/expense" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/addIncome"
+                    style="@style/Widget.Material3.Button.TonalButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="10dp"
+                    android:text="Income"
+                    app:icon="@drawable/ic_add"
+                    app:backgroundTint="@color/income_container"
+                    app:iconTint="@color/income"
+                    android:textColor="@color/income" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/agendaCard"
+        style="@style/Widget.Ledgerly.Card.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        android:contentDescription="Open planning centre"
+        app:layout_constraintTop_toBottomOf="@id/dayCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@color/primary_container"
+                android:gravity="center"
+                android:text="◎"
+                android:textColor="@color/on_primary_container"
+                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/agendaTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Due on this date"
+                    android:textAppearance="?attr/textAppearanceTitleMedium" />
+                <TextView
+                    android:id="@+id/agendaSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:maxLines="4"
+                    android:textColor="@color/on_surface_variant" />
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="›"
+                android:textColor="@color/primary"
+                android:textSize="28sp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/activityTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Activity on this date"
+        android:textAppearance="@style/TextAppearance.Ledgerly.Section"
+        app:layout_constraintTop_toBottomOf="@id/agendaCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="6dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/activityTitle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        />
+
+    <TextView
+        android:id="@+id/empty"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="24dp"
+        android:text="No activity here yet"
+        android:textAppearance="@style/TextAppearance.Material3.BodyLarge"
+        android:textColor="@color/on_surface_variant"
+        android:visibility="gone"
+        android:background="@drawable/bg_surface_pill"
+        app:layout_constraintTop_toTopOf="@id/list"
+        app:layout_constraintBottom_toBottomOf="@id/list"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

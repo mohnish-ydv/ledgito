@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/categoryLayout"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="Category">
+        <com.google.android.material.textfield.MaterialAutoCompleteTextView android:id="@+id/categoryInput"
+            android:layout_width="match_parent" android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/amountLayout"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Amount">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/amountInput"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/memoLayout"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:layout_marginTop="10dp" android:hint="Split note (optional)">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/memoInput"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:maxLength="120" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

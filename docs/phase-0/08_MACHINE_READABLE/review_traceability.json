@@ -1,0 +1,111 @@
+[
+  {
+    "reviewId": "REV-EXP-001",
+    "problem": "Receipt upload missing",
+    "evidenceExcerpt": "“still lacks of uploading receipts for each expenditure”",
+    "featureIds": [
+      "ATT-001",
+      "ATT-002"
+    ],
+    "resolution": "Fully addressed in v1"
+  },
+  {
+    "reviewId": "REV-EXP-002",
+    "problem": "Export crashes and no backup",
+    "evidenceExcerpt": "“Not being able to export or back-up the data... crashing... csv”",
+    "featureIds": [
+      "EXP-001",
+      "BKP-001",
+      "RST-001"
+    ],
+    "resolution": "Fully addressed in v1"
+  },
+  {
+    "reviewId": "REV-EXP-003",
+    "problem": "Basic yearly/custom views, custom budgets and filters restricted",
+    "evidenceExcerpt": "“yearly view and custom view... custom time period budgets or good filters”",
+    "featureIds": [
+      "REP-001",
+      "REP-002",
+      "BUD-002",
+      "SEA-001",
+      "MON-002"
+    ],
+    "resolution": "Fully addressed in free v1"
+  },
+  {
+    "reviewId": "REV-EXP-004",
+    "problem": "Transfer removed after update",
+    "evidenceExcerpt": "“removed the TRANSFER option”",
+    "featureIds": [
+      "TRF-001",
+      "UI-001"
+    ],
+    "resolution": "Fully addressed; regression gate added"
+  },
+  {
+    "reviewId": "REV-EXP-005",
+    "problem": "Three years of data lost after uninstall; wants account",
+    "evidenceExcerpt": "“uninstalled app and my 3 year data... there should be atleast online account”",
+    "featureIds": [
+      "BKP-001",
+      "BKP-002",
+      "BKP-003",
+      "RST-001"
+    ],
+    "resolution": "Root cause fully addressed without mandatory account/server"
+  },
+  {
+    "reviewId": "REV-EXP-006",
+    "problem": "Recurring payments and slow date navigation",
+    "evidenceExcerpt": "“recurring payment feature... toggle between days using calendar”",
+    "featureIds": [
+      "REC-001",
+      "REC-002",
+      "CAL-001"
+    ],
+    "resolution": "Fully addressed in v1"
+  },
+  {
+    "reviewId": "REV-EXP-007",
+    "problem": "Six-month and one-year views removed/paywalled",
+    "evidenceExcerpt": "“removed the option to see 6 months and 1 year’s expenses”",
+    "featureIds": [
+      "REP-001",
+      "MON-002",
+      "UI-001"
+    ],
+    "resolution": "Fully addressed in free v1"
+  },
+  {
+    "reviewId": "REV-EXP-008",
+    "problem": "Beginner cannot configure app",
+    "evidenceExcerpt": "“I can’t figure out how to set this up the way I need to”",
+    "featureIds": [
+      "ONB-001",
+      "ONB-002"
+    ],
+    "resolution": "Fully addressed through guided setup"
+  },
+  {
+    "reviewId": "REV-EXP-009",
+    "problem": "Budget becomes difficult after second month",
+    "evidenceExcerpt": "“only good for a month record... after second... difficulty to record budget”",
+    "featureIds": [
+      "BUD-001",
+      "BUD-003"
+    ],
+    "resolution": "Period engine and regression tests address it"
+  },
+  {
+    "reviewId": "REV-CROSS-001",
+    "problem": "Apps become unusable after ads/subscription changes",
+    "evidenceExcerpt": "Study-planner reviews describe free limits, subscription pressure and ad bloat",
+    "featureIds": [
+      "MON-001",
+      "MON-002",
+      "UI-001"
+    ],
+    "resolution": "Applied as portfolio-level monetisation rule"
+  }
+]

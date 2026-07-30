@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingTop="18dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="118dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="Insights"
+            app:subtitle="Understand the pattern, not just the total" />
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/presetLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="Period">
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/presetInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/currencyLayout"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:hint="Currency">
+                        <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                            android:id="@+id/currencyInput"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dateControls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <com.google.android.material.button.MaterialButton android:id="@+id/previous" style="@style/Widget.Material3.Button.IconButton" android:layout_width="48dp" android:layout_height="48dp" android:text="‹" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/dateButton" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_height="48dp" android:layout_weight="1" android:text="Select date" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/today" style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="48dp" android:text="Today" />
+                    <com.google.android.material.button.MaterialButton android:id="@+id/next" style="@style/Widget.Material3.Button.IconButton" android:layout_width="48dp" android:layout_height="48dp" android:text="›" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/customControls"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputLayout android:id="@+id/fromLayout" style="@style/Widget.Ledgerly.TextInput" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="From"><com.google.android.material.textfield.TextInputEditText android:id="@+id/fromInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:clickable="true" android:focusable="false" /></com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout android:id="@+id/toLayout" style="@style/Widget.Ledgerly.TextInput" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="8dp" android:layout_weight="1" android:hint="To"><com.google.android.material.textfield.TextInputEditText android:id="@+id/toInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:clickable="true" android:focusable="false" /></com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <com.google.android.material.button.MaterialButton android:id="@+id/applyCustom" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Apply range" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/windowLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textAppearance="?attr/textAppearanceLabelLarge"
+            android:textColor="@color/on_surface_variant" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="238dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_hero_balance">
+
+            <View
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="-54dp"
+                android:layout_marginEnd="-45dp"
+                android:background="@drawable/bg_hero_orb" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="22dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="NET CASH FLOW" android:textColor="@color/hero_muted" android:textSize="11sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/netValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:maxLines="1" android:text="₹0" android:textAppearance="@style/TextAppearance.Ledgerly.HeroAmount" />
+                    <TextView android:id="@+id/comparison" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:maxLines="3" android:textColor="@color/hero_muted" android:textSize="12sp" />
+                </LinearLayout>
+
+                <com.mohnishraj.goldmineledger.FlowRingView
+                    android:id="@+id/flowRing"
+                    android:layout_width="118dp"
+                    android:layout_height="118dp" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal">
+            <TextView android:id="@+id/incomeValue" android:layout_width="0dp" android:layout_height="76dp" android:layout_weight="1" android:background="@drawable/bg_income_soft" android:gravity="center" android:padding="10dp" android:textColor="@color/income" android:textStyle="bold" />
+            <TextView android:id="@+id/expenseValue" android:layout_width="0dp" android:layout_height="76dp" android:layout_marginStart="8dp" android:layout_weight="1" android:background="@drawable/bg_expense_soft" android:gravity="center" android:padding="10dp" android:textColor="@color/expense" android:textStyle="bold" />
+            <TextView android:id="@+id/transferValue" android:layout_width="0dp" android:layout_height="76dp" android:layout_marginStart="8dp" android:layout_weight="1" android:background="@drawable/bg_transfer_soft" android:gravity="center" android:padding="10dp" android:textColor="@color/transfer" android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/healthCard"
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Financial health"
+                    android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="A private planning score — not a credit score"
+                    android:textColor="@color/on_surface_variant" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/financialScore"
+                        android:layout_width="82dp"
+                        android:layout_height="82dp"
+                        android:background="@drawable/bg_surface_pill"
+                        android:gravity="center"
+                        android:text="50"
+                        android:textAppearance="@style/TextAppearance.Material3.HeadlineLarge"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold" />
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/scoreLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Building"
+                            android:textAppearance="?attr/textAppearanceTitleLarge" />
+                        <TextView
+                            android:id="@+id/savingsRate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Savings rate —"
+                            android:textColor="@color/on_surface_variant" />
+                        <TextView
+                            android:id="@+id/budgetHealth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="3dp"
+                            android:text="Budget health —"
+                            android:textColor="@color/on_surface_variant" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/insightText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_surface_pill"
+                    android:lineSpacingExtra="3dp"
+                    android:padding="14dp"
+                    android:text="Add transactions to unlock private insights."
+                    android:textColor="@color/on_surface_variant" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Money behaviour"
+                    android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+                <TextView
+                    android:id="@+id/incomeStability"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Need more history"
+                    android:textColor="@color/on_surface_variant" />
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:columnCount="2"
+                    android:useDefaultMargins="false">
+                    <TextView android:id="@+id/avgDailyMetric" android:layout_width="0dp" android:layout_height="82dp" android:layout_columnWeight="1" android:layout_marginEnd="5dp" android:layout_marginBottom="10dp" android:background="@drawable/bg_surface_pill" android:gravity="center" android:padding="10dp" android:text="AVG / DAY
+—" android:textColor="@color/on_surface_variant" android:textStyle="bold" />
+                    <TextView android:id="@+id/transactionCountMetric" android:layout_width="0dp" android:layout_height="82dp" android:layout_columnWeight="1" android:layout_marginStart="5dp" android:layout_marginBottom="10dp" android:background="@drawable/bg_surface_pill" android:gravity="center" android:padding="10dp" android:text="TRANSACTIONS
+0" android:textColor="@color/on_surface_variant" android:textStyle="bold" />
+                    <TextView android:id="@+id/noSpendMetric" android:layout_width="0dp" android:layout_height="82dp" android:layout_columnWeight="1" android:layout_marginEnd="5dp" android:background="@drawable/bg_surface_pill" android:gravity="center" android:padding="10dp" android:text="NO-SPEND DAYS
+0" android:textColor="@color/on_surface_variant" android:textStyle="bold" />
+                    <TextView android:id="@+id/volatilityMetric" android:layout_width="0dp" android:layout_height="82dp" android:layout_columnWeight="1" android:layout_marginStart="5dp" android:background="@drawable/bg_surface_pill" android:gravity="center" android:padding="10dp" android:text="VARIATION
+—" android:textColor="@color/on_surface_variant" android:textStyle="bold" />
+                </GridLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Spending heatmap"
+                    android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+                <TextView
+                    android:id="@+id/heatmapSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Recent spending intensity by day"
+                    android:textColor="@color/on_surface_variant" />
+                <com.mohnishraj.goldmineledger.SpendingHeatmapView
+                    android:id="@+id/heatmap"
+                    android:layout_width="match_parent"
+                    android:layout_height="176dp"
+                    android:layout_marginTop="14dp"
+                    android:importantForAccessibility="yes" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="18dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cash-flow rhythm" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Daily net movement across the selected period" android:textColor="@color/on_surface_variant" />
+                <com.mohnishraj.goldmineledger.SparklineView android:id="@+id/sparkline" android:layout_width="match_parent" android:layout_height="150dp" android:layout_marginTop="12dp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton android:id="@+id/budgetShortcut" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:text="Budgets" />
+            <com.google.android.material.button.MaterialButton android:id="@+id/calendarShortcut" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="0dp" android:layout_height="52dp" android:layout_marginStart="8dp" android:layout_weight="1" android:text="Calendar" />
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="Spending structure" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Top expense categories in this window" android:textColor="@color/on_surface_variant" />
+        <LinearLayout android:id="@+id/categoryContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="Top payees" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="2dp" android:text="Where recorded spending concentrated" android:textColor="@color/on_surface_variant" />
+        <LinearLayout android:id="@+id/payeeContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="Account movement" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+        <LinearLayout android:id="@+id/accountContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical" />
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="Daily detail" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+        <LinearLayout android:id="@+id/dailyContainer" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:orientation="vertical" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

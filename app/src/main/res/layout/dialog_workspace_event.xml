@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="22dp">
+
+    <TextView
+        android:id="@+id/titleLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/labelLayout"
+        style="@style/Widget.Ledgerly.TextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:hint="Label">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/labelInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amountLayout"
+        style="@style/Widget.Ledgerly.TextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Amount">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amountInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dateLayout"
+        style="@style/Widget.Ledgerly.TextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Date"
+        app:endIconDrawable="@drawable/ic_calendar"
+        app:endIconMode="custom">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dateInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/postToLedgerSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Also record this payment in Activity"
+        android:visibility="gone" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/completedSwitch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Completed / checked" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/noteLayout"
+        style="@style/Widget.Ledgerly.TextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="Note">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/noteInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapSentences" />
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

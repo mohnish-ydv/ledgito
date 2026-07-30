@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/surface"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="28dp">
+
+    <View
+        android:layout_width="38dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_sheet_handle" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Quick add"
+        android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:text="Record money now or create something for later."
+        android:textColor="@color/on_surface_variant" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:columnCount="2"
+        android:useDefaultMargins="false">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/quickExpense"
+            style="@style/Widget.Ledgerly.QuickActionCard"
+            android:layout_width="0dp"
+            android:layout_height="92dp"
+            android:layout_columnWeight="1"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:background="@drawable/bg_expense_soft" android:gravity="center" android:text="−" android:textColor="@color/expense" android:textSize="24sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Expense" android:textAppearance="?attr/textAppearanceTitleMedium" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Money spent" android:textColor="@color/on_surface_variant" android:textSize="12sp" /></LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/quickIncome"
+            style="@style/Widget.Ledgerly.QuickActionCard"
+            android:layout_width="0dp"
+            android:layout_height="92dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:background="@drawable/bg_income_soft" android:gravity="center" android:text="+" android:textColor="@color/income" android:textSize="24sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Income" android:textAppearance="?attr/textAppearanceTitleMedium" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Money received" android:textColor="@color/on_surface_variant" android:textSize="12sp" /></LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/quickTransfer"
+            style="@style/Widget.Ledgerly.QuickActionCard"
+            android:layout_width="0dp"
+            android:layout_height="92dp"
+            android:layout_columnWeight="1"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:background="@drawable/bg_transfer_soft" android:gravity="center" android:text="⇄" android:textColor="@color/transfer" android:textSize="20sp" android:textStyle="bold" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Transfer" android:textAppearance="?attr/textAppearanceTitleMedium" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Between accounts" android:textColor="@color/on_surface_variant" android:textSize="12sp" /></LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/quickBill"
+            style="@style/Widget.Ledgerly.QuickActionCard"
+            android:layout_width="0dp"
+            android:layout_height="92dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="12dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:background="@color/tertiary_container" android:gravity="center" android:text="▤" android:textColor="@color/tertiary" android:textSize="20sp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bill" android:textAppearance="?attr/textAppearanceTitleMedium" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Plan a due date" android:textColor="@color/on_surface_variant" android:textSize="12sp" /></LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/quickGoal"
+            style="@style/Widget.Ledgerly.QuickActionCard"
+            android:layout_width="0dp"
+            android:layout_height="92dp"
+            android:layout_columnWeight="1"
+            android:layout_marginEnd="6dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:background="@color/income_container" android:gravity="center" android:text="◎" android:textColor="@color/income" android:textSize="21sp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Goal" android:textAppearance="?attr/textAppearanceTitleMedium" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Save with purpose" android:textColor="@color/on_surface_variant" android:textSize="12sp" /></LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/quickInvestment"
+            style="@style/Widget.Ledgerly.QuickActionCard"
+            android:layout_width="0dp"
+            android:layout_height="92dp"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="6dp">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="horizontal" android:padding="16dp">
+                <TextView android:layout_width="44dp" android:layout_height="44dp" android:background="@color/primary_container" android:gravity="center" android:text="↗" android:textColor="@color/primary" android:textSize="21sp" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_marginStart="12dp" android:layout_weight="1" android:orientation="vertical"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Investment" android:textAppearance="?attr/textAppearanceTitleMedium" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Track a holding" android:textColor="@color/on_surface_variant" android:textSize="12sp" /></LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </GridLayout>
+</LinearLayout>

@@ -1,0 +1,37 @@
+{
+  "product": "Goldmine Ledger",
+  "package": "com.mohnishraj.goldmineledger",
+  "milestone": "M1",
+  "versionName": "0.1.0-m1",
+  "versionCode": 1,
+  "status": "source_complete_pending_github_compiler",
+  "delivered": [
+    "github_actions",
+    "onboarding",
+    "room_v1",
+    "datastore",
+    "profile",
+    "accounts_crud",
+    "categories_crud",
+    "one_level_subcategories",
+    "opening_balances",
+    "themes",
+    "currency_settings",
+    "audit_foundation"
+  ],
+  "excluded_until_m2": [
+    "transactions",
+    "transfers",
+    "budgets",
+    "reports",
+    "recurring",
+    "attachments",
+    "search_filters"
+  ],
+  "privacy": {
+    "internet_permission": false,
+    "account_required": false,
+    "cloud_sync": false
+  },
+  "buildArtifact": "Goldmine-Ledger-M1.apk"
+}

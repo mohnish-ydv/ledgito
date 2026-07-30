@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/runRecurringNow" android:title="Run now"/>
+    <item android:id="@+id/skipRecurring" android:title="Skip next"/>
+    <item android:id="@+id/pauseRecurring" android:title="Pause"/>
+    <item android:id="@+id/resumeRecurring" android:title="Resume"/>
+    <item android:id="@+id/editRecurring" android:title="Edit"/>
+    <item android:id="@+id/deleteRecurring" android:title="Delete"/>
+</menu>

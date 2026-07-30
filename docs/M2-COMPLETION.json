@@ -1,0 +1,46 @@
+{
+  "product": "Ledgerly",
+  "package": "com.mohnishraj.goldmineledger",
+  "milestone": "M2",
+  "versionCode": 2,
+  "versionName": "0.2.0-m2",
+  "databaseVersion": 2,
+  "status": "source-complete-awaiting-github-android-build",
+  "features": [
+    "income expense and transfer transactions",
+    "same and cross currency transfers",
+    "transfer fees",
+    "cleared and pending entries",
+    "split transactions",
+    "payee notes and tags",
+    "receipt image and PDF attachments",
+    "soft delete undo and revision history",
+    "search sorting and advanced filters",
+    "account running balances",
+    "calendar day navigation",
+    "recurring auto or review rules",
+    "pause resume skip and run now recurring controls",
+    "weekly monthly yearly and custom budgets",
+    "budget carry over and stable period history",
+    "day week month quarter six month year all time and custom reports",
+    "Room migration 1 to 2"
+  ],
+  "deferredToM3": [
+    "ZIP backup and validated restore",
+    "CSV and JSON import export",
+    "automatic backup rotation",
+    "Android notification delivery",
+    "app lock and diagnostics",
+    "complete accessibility and help pass"
+  ],
+  "validation": {
+    "xmlParsed": true,
+    "kotlinStubCompilation": true,
+    "utilityTestsPassed": 14,
+    "sqliteTablesTested": 13,
+    "androidGradleBuild": "delegated to GitHub Actions"
+  },
+  "buildArtifact": "Ledgerly-M2.apk",
+  "permissions": [],
+  "internetPermission": false
+}

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingBottom="40dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back"
+            app:subtitle="Everything you own, invest and owe"
+            app:title="Wealth centre" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_hero_balance">
+            <View android:layout_width="180dp" android:layout_height="180dp" android:layout_gravity="top|end" android:layout_marginTop="-52dp" android:layout_marginEnd="-42dp" android:background="@drawable/bg_hero_orb" />
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="vertical" android:padding="22dp">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="RECORDED NET WORTH" android:textColor="@color/hero_muted" android:textSize="11sp" android:textStyle="bold" />
+                <TextView android:id="@+id/netWorthValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:maxLines="1" android:text="₹0" android:textAppearance="@style/TextAppearance.Ledgerly.HeroAmount" />
+                <TextView android:id="@+id/netWorthCaption" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:text="Accounts + holdings + assets − liabilities" android:textColor="@color/hero_muted" android:textSize="14sp" />
+                <com.google.android.material.button.MaterialButton android:id="@+id/netWorthButton" style="@style/Widget.Material3.Button.TonalButton" android:layout_width="wrap_content" android:layout_height="48dp" android:layout_marginTop="14dp" android:text="Open net-worth statement" android:textColor="@color/on_primary_container" app:backgroundTint="@color/primary_container" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:orientation="horizontal">
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="108dp" android:layout_marginEnd="5dp" android:layout_weight="1"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="vertical" android:padding="14dp"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ACCOUNTS" android:textColor="@color/on_surface_variant" android:textSize="10sp" android:textStyle="bold" /><TextView android:id="@+id/accountsValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:maxLines="1" android:text="₹0" android:textAppearance="?attr/textAppearanceTitleMedium" android:textStyle="bold" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="108dp" android:layout_marginHorizontal="5dp" android:layout_weight="1"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="vertical" android:padding="14dp"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="HOLDINGS" android:textColor="@color/on_surface_variant" android:textSize="10sp" android:textStyle="bold" /><TextView android:id="@+id/investmentsValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:maxLines="1" android:text="₹0" android:textAppearance="?attr/textAppearanceTitleMedium" android:textStyle="bold" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="108dp" android:layout_marginStart="5dp" android:layout_weight="1"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center_vertical" android:orientation="vertical" android:padding="14dp"><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OWED" android:textColor="@color/on_surface_variant" android:textSize="10sp" android:textStyle="bold" /><TextView android:id="@+id/liabilitiesValue" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="7dp" android:maxLines="1" android:text="₹0" android:textAppearance="?attr/textAppearanceTitleMedium" android:textStyle="bold" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/performanceCard"
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:clickable="true"
+            android:focusable="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="18dp">
+                <TextView
+                    android:layout_width="46dp"
+                    android:layout_height="46dp"
+                    android:background="@color/income_container"
+                    android:gravity="center"
+                    android:text="↗"
+                    android:textColor="@color/income"
+                    android:textSize="22sp" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Recorded performance"
+                        android:textAppearance="?attr/textAppearanceTitleMedium" />
+                    <TextView
+                        android:id="@+id/performanceCaption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:text="Add cost and current values to compare holdings"
+                        android:textColor="@color/on_surface_variant" />
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/performanceValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="—"
+                    android:textAppearance="?attr/textAppearanceTitleMedium"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="24dp" android:text="Allocation snapshot" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+        <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Ledgerly.Card.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+                <com.mohnishraj.goldmineledger.AllocationDonutView
+                    android:id="@+id/allocationDonut"
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:importantForAccessibility="yes" />
+                <TextView
+                    android:id="@+id/diversificationMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/bg_surface_pill"
+                    android:padding="14dp"
+                    android:text="Add assets to build an allocation picture."
+                    android:textColor="@color/on_surface_variant" />
+                <LinearLayout
+                    android:id="@+id/allocationContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="26dp" android:text="Wealth tools" android:textAppearance="@style/TextAppearance.Ledgerly.Section" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="3dp" android:text="Values are manual and private. Ledgito does not fetch prices or provide investment advice." android:textColor="@color/on_surface_variant" />
+
+        <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:columnCount="2" android:useDefaultMargins="false">
+            <com.google.android.material.card.MaterialCardView android:id="@+id/investmentsCard" style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="104dp" android:layout_columnWeight="1" android:layout_marginEnd="5dp" android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp"><TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@color/income_container" android:gravity="center" android:text="↗" android:textColor="@color/income" android:textSize="20sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Investments" android:textAppearance="?attr/textAppearanceTitleSmall" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/mutualFundsCard" style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="104dp" android:layout_columnWeight="1" android:layout_marginStart="5dp" android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp"><TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@color/primary_container" android:gravity="center" android:text="⌁" android:textColor="@color/primary" android:textSize="20sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Mutual funds" android:textAppearance="?attr/textAppearanceTitleSmall" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/goldCard" style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="104dp" android:layout_columnWeight="1" android:layout_marginEnd="5dp" android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp"><TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@color/tertiary_container" android:gravity="center" android:text="◈" android:textColor="@color/tertiary" android:textSize="20sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Gold" android:textAppearance="?attr/textAppearanceTitleSmall" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/fdCard" style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="104dp" android:layout_columnWeight="1" android:layout_marginStart="5dp" android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp"><TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@color/transfer_container" android:gravity="center" android:text="▰" android:textColor="@color/transfer" android:textSize="20sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Fixed deposits" android:textAppearance="?attr/textAppearanceTitleSmall" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/ppfCard" style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="104dp" android:layout_columnWeight="1" android:layout_marginEnd="5dp" android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp"><TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@color/income_container" android:gravity="center" android:text="P" android:textColor="@color/income" android:textSize="20sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="PPF" android:textAppearance="?attr/textAppearanceTitleSmall" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/epfCard" style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="104dp" android:layout_columnWeight="1" android:layout_marginStart="5dp" android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp"><TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@color/primary_container" android:gravity="center" android:text="E" android:textColor="@color/primary" android:textSize="20sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="EPF" android:textAppearance="?attr/textAppearanceTitleSmall" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/cryptoCard" style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="104dp" android:layout_columnWeight="1" android:layout_marginEnd="5dp" android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp"><TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@color/surface_container_high" android:gravity="center" android:text="◇" android:textColor="@color/on_surface_variant" android:textSize="20sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Crypto" android:textAppearance="?attr/textAppearanceTitleSmall" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/assetsCard" style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="104dp" android:layout_columnWeight="1" android:layout_marginStart="5dp" android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp"><TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@color/transfer_container" android:gravity="center" android:text="◆" android:textColor="@color/transfer" android:textSize="20sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Assets" android:textAppearance="?attr/textAppearanceTitleSmall" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/liabilitiesCard" style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="104dp" android:layout_columnWeight="1" android:layout_marginEnd="5dp" android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp"><TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@color/expense_container" android:gravity="center" android:text="▼" android:textColor="@color/expense" android:textSize="20sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Liabilities" android:textAppearance="?attr/textAppearanceTitleSmall" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView android:id="@+id/creditCard" style="@style/Widget.Ledgerly.Card.Borderless" android:layout_width="0dp" android:layout_height="104dp" android:layout_columnWeight="1" android:layout_marginStart="5dp" android:layout_marginBottom="10dp" android:clickable="true" android:focusable="true"><LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="16dp"><TextView android:layout_width="40dp" android:layout_height="40dp" android:background="@color/tertiary_container" android:gravity="center" android:text="%" android:textColor="@color/tertiary" android:textSize="20sp" /><TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Credit health" android:textAppearance="?attr/textAppearanceTitleSmall" /></LinearLayout></com.google.android.material.card.MaterialCardView>
+        </GridLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

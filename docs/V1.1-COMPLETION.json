@@ -1,0 +1,20 @@
+{
+  "product": "Ledgito",
+  "release": "1.1 Full Suite",
+  "versionCode": 9,
+  "versionName": "1.1.0-full-suite",
+  "databaseVersion": 3,
+  "packageId": "com.mohnishraj.goldmineledger",
+  "buildArtifact": "Ledgito-v1.1.0-Full-Suite.apk",
+  "githubArtifact": "Ledgito-v1.1.0-Full-Suite-APK",
+  "internetPermission": false,
+  "platformAutoBackup": false,
+  "explicitEncryptedBackup": true,
+  "phases": [
+    "UX perfection",
+    "Planning and money management",
+    "Wealth",
+    "Analytics"
+  ],
+  "cloudDeferred": true
+}

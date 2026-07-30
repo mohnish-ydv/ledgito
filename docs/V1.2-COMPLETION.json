@@ -1,0 +1,23 @@
+{
+  "product": "Ledgito",
+  "release": "1.2 Professional Experience",
+  "versionCode": 10,
+  "versionName": "1.2.0-professional-experience",
+  "databaseVersion": 3,
+  "packageId": "com.mohnishraj.goldmineledger",
+  "buildArtifact": "Ledgito-v1.2.0-Professional-Experience.apk",
+  "githubArtifact": "Ledgito-v1.2.0-Professional-Experience-APK",
+  "internetPermission": false,
+  "platformAutoBackup": false,
+  "explicitEncryptedBackup": true,
+  "cloudDeferred": true,
+  "quickAddBottomSheet": true,
+  "dockFabRegressionFixed": true,
+  "customHome": true,
+  "swipeEditDeleteUndo": true,
+  "planningHealth": true,
+  "debtStrategyComparison": true,
+  "allocationDonut": true,
+  "behaviourAnalytics": true,
+  "offlineSmartInsights": true
+}

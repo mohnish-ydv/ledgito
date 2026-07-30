@@ -1,0 +1,183 @@
+{
+  "project": "Goldmine Ledger",
+  "phase": "0",
+  "status": "complete",
+  "developer": "Mohnish Raj",
+  "package": "com.mohnishraj.goldmineledger",
+  "generatedAt": "2026-07-28",
+  "sourceResearch": "Project-Goldmine-Research-20260728-2101.zip",
+  "directExpenseReviewItems": 9,
+  "reviewMappedP0Requirement": "all",
+  "files": [
+    {
+      "path": "00_START_HERE/DECISION_SUMMARY.md",
+      "bytes": 1444,
+      "sha256": "fb79a188c5da47d5753d26178cbdf4af027efc40c8de44d58b6e9d285a31d6a8"
+    },
+    {
+      "path": "00_START_HERE/PHASE_0_COMPLETE.md",
+      "bytes": 1791,
+      "sha256": "2df48ff7b3ecb8e8e438c400e349047032ed967721e9f3296b7aa19378464cf0"
+    },
+    {
+      "path": "01_PRODUCT/AUDIENCE_AND_JOBS.md",
+      "bytes": 1389,
+      "sha256": "cca39b0b854dc79643e0f110b79f8ba6c79705afa49e8dc52b8b700f30e2d2c4"
+    },
+    {
+      "path": "01_PRODUCT/FEATURE_CATALOGUE.md",
+      "bytes": 5338,
+      "sha256": "c958d6d9c104f3e9bea311909f45a83cf691a17e52fd36b7d5829c3b4c1bd55e"
+    },
+    {
+      "path": "01_PRODUCT/MASTER_PRD.md",
+      "bytes": 5825,
+      "sha256": "438ccb5676fe0114ceb602a03998b54aba485300e537e2ad87b4fcf1f8884182"
+    },
+    {
+      "path": "01_PRODUCT/PRODUCT_IDENTITY.md",
+      "bytes": 1154,
+      "sha256": "45f32512639ae59d935696af2685106f0e99c307f298f4231e385888c7dd9064"
+    },
+    {
+      "path": "01_PRODUCT/RELEASE_SCOPE.md",
+      "bytes": 1031,
+      "sha256": "793cb1f09311d30fec9ba9ee14019d1754be581e46e9cc9e6bc017255c18797e"
+    },
+    {
+      "path": "02_REVIEW_TRACEABILITY/REVIEW_TO_FEATURE_MAP.md",
+      "bytes": 2367,
+      "sha256": "7c946631b0ff0d205c69b78737f0eba1f79e15cd7174d78f0ada354b4ea0504d"
+    },
+    {
+      "path": "02_REVIEW_TRACEABILITY/ROOT_CAUSE_ANALYSIS.md",
+      "bytes": 2061,
+      "sha256": "1f76f1f80dda4da54c2378f8a807b368b3e2a368173865d8083938f9ef5034d4"
+    },
+    {
+      "path": "02_REVIEW_TRACEABILITY/review_traceability.csv",
+      "bytes": 1879,
+      "sha256": "3e7ae6840c6d0d9bd0f6c41f3d40056505e152518a1cd9b81df8f79d1ee06b3a"
+    },
+    {
+      "path": "03_UX_DESIGN/CRITICAL_UX_FLOWS.md",
+      "bytes": 1757,
+      "sha256": "d30d88e6363ad286f2ccdda663f52f950c2065afca1051a9f5396fe9f5bac475"
+    },
+    {
+      "path": "03_UX_DESIGN/DESIGN_SYSTEM.md",
+      "bytes": 1550,
+      "sha256": "5b31ba1e0274da7bdc3a96a922fb3a6d805c9fa60b9ab4cd887de7d3927eaee6"
+    },
+    {
+      "path": "03_UX_DESIGN/INFORMATION_ARCHITECTURE.md",
+      "bytes": 994,
+      "sha256": "49b76f78646c2f3e20f13d5542369a04e1190910342123c2e84c78011b021f84"
+    },
+    {
+      "path": "03_UX_DESIGN/SCREEN_SPECIFICATIONS.md",
+      "bytes": 4549,
+      "sha256": "ef646b074ee51fa6257ea2313681bdcec8aafa0e45828d6623719a91a272783d"
+    },
+    {
+      "path": "04_DATA_AND_BACKUP/BACKUP_RESTORE_EXPORT_SPEC.md",
+      "bytes": 2670,
+      "sha256": "e19665a11aace826d9dbd5f75b20a833cdf60389908231a23da0b89f1119863a"
+    },
+    {
+      "path": "04_DATA_AND_BACKUP/DATABASE_SCHEMA.md",
+      "bytes": 3657,
+      "sha256": "f7640f74abb005c638e3757fe0cf82710cb4fcd09b00f6ed69395878f72ebca2"
+    },
+    {
+      "path": "04_DATA_AND_BACKUP/DATA_INVARIANTS.md",
+      "bytes": 845,
+      "sha256": "706687f7e6551d98e29465f53d9c9a79baeed2a6998c545807c6c3a08e49f685"
+    },
+    {
+      "path": "04_DATA_AND_BACKUP/reference_schema.sql",
+      "bytes": 5788,
+      "sha256": "dadb8b967198eb140a591a6a5080181bf8972d972a7310a21943737552e84652"
+    },
+    {
+      "path": "05_TECHNICAL/ARCHITECTURE.md",
+      "bytes": 2242,
+      "sha256": "3e16e935004bf46ee9366d4a1feebe7fe4c217d64579c06b3d7b005367db498f"
+    },
+    {
+      "path": "05_TECHNICAL/PERMISSIONS_AND_PLATFORM.md",
+      "bytes": 685,
+      "sha256": "334f85f48730018821def2276bc6d8faddcbb24ace472340363f0f022695f35a"
+    },
+    {
+      "path": "05_TECHNICAL/SECURITY_AND_PRIVACY.md",
+      "bytes": 1409,
+      "sha256": "d8e3a8318466a961e84ef6006cd61c3c3d5a897cc985a61757c5d31fdbe56fe7"
+    },
+    {
+      "path": "06_BUSINESS/MONETISATION.md",
+      "bytes": 1455,
+      "sha256": "57444131144da16ce0234ad57a753ac6aa6247beafc5d07b07025352b39fa1ce"
+    },
+    {
+      "path": "06_BUSINESS/STORE_POSITIONING.md",
+      "bytes": 847,
+      "sha256": "74c6df5b4290db2cd49fed85f9cf39a651ff0072bc4d52b85909f6f99cb48517"
+    },
+    {
+      "path": "06_BUSINESS/SUCCESS_METRICS.md",
+      "bytes": 780,
+      "sha256": "64a748df9d65525db7ca2b4ad86f5a874f3f59dce9ab79bf53cf6d1bfa4f2c2b"
+    },
+    {
+      "path": "07_DELIVERY/BUILD_MILESTONES.md",
+      "bytes": 1789,
+      "sha256": "884808bfb5741337ced200929dd137c0f3688a2f28b9dcbaca35140c57e2ab66"
+    },
+    {
+      "path": "07_DELIVERY/DECISION_LOG.md",
+      "bytes": 1494,
+      "sha256": "c5f73bd4d4c52e72c6487bd7c033d4f189f80a5343a6d6a2d9fa5829aef2313f"
+    },
+    {
+      "path": "07_DELIVERY/DEFINITION_OF_DONE.md",
+      "bytes": 577,
+      "sha256": "f5354a772b1adb8478b6cdcde99b0c955921b9e08df5fe5b4d18799cf3f465b5"
+    },
+    {
+      "path": "07_DELIVERY/QA_ACCEPTANCE_MATRIX.md",
+      "bytes": 1741,
+      "sha256": "9422fa9a555da6453bd08124bb047b68a60104575ab9b679c8dc336dbe60682b"
+    },
+    {
+      "path": "07_DELIVERY/RISK_REGISTER.md",
+      "bytes": 1224,
+      "sha256": "73f2001d8778ff4ceb342e3271b52b462b97c6ac528f8664df8f598ff0d84997"
+    },
+    {
+      "path": "08_MACHINE_READABLE/feature_catalogue.csv",
+      "bytes": 4625,
+      "sha256": "904e1cd23bbe7bccef66d8af5d138278a1aaccad3791b480106319e320c30053"
+    },
+    {
+      "path": "08_MACHINE_READABLE/feature_catalogue.json",
+      "bytes": 9392,
+      "sha256": "2480d390839bd196cff5569fe861f69f148a7b0284efe1d6204c28440d73bbd3"
+    },
+    {
+      "path": "08_MACHINE_READABLE/review_traceability.json",
+      "bytes": 3250,
+      "sha256": "b5ad48c36dc9a848bb930921a90b3eba93e47663c74e478991cbaeea13d3eb7d"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1223,
+      "sha256": "41078db19fe51ae179103b228a01b54c43e2c864a782eeb65b7dfca1205d4d92"
+    },
+    {
+      "path": "index.html",
+      "bytes": 3654,
+      "sha256": "472f74e278fc43547da6f26f393205006c5afb9ba92d4592aef8e49d935c8862"
+    }
+  ]
+}

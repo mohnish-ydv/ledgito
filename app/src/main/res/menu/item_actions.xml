@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/edit" android:title="Edit"/>
+    <item android:id="@+id/adjustBalance" android:title="Adjust balance"/>
+    <item android:id="@+id/mergeCategory" android:title="Merge into…"/>
+    <item android:id="@+id/archive" android:title="Archive"/>
+    <item android:id="@+id/restore" android:title="Restore"/>
+    <item android:id="@+id/delete" android:title="Delete"/>
+</menu>

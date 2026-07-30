@@ -1,0 +1,30 @@
+{
+  "product": "Ledgerly",
+  "release": "1.0.1 UX Stability",
+  "versionCode": 8,
+  "versionName": "1.0.1-ux-stability",
+  "databaseVersion": 3,
+  "packageId": "com.mohnishraj.goldmineledger",
+  "buildArtifact": "Ledgerly-v1.0.1-UX-Stability.apk",
+  "githubArtifact": "Ledgerly-v1.0.1-UX-Stability-APK",
+  "minSdk": 26,
+  "targetSdk": 35,
+  "internetPermission": false,
+  "platformAutoBackup": false,
+  "explicitEncryptedBackup": true,
+  "theme": "Obsidian Aurora",
+  "privacyMasking": true,
+  "appLock": true,
+  "localReminders": true,
+  "liveAdvancedTools": 15,
+  "roomTables": 16,
+  "destructiveMigration": false,
+  "regressionFixes": [
+    "All RecyclerViews have explicit LinearLayoutManager",
+    "Root navigation always returns to Home",
+    "Status/navigation/cutout insets applied on Android 15",
+    "Onboarding date uses a calendar picker",
+    "Dashboard cash-flow ring no longer clips",
+    "Quick Add is integrated into the bottom dock"
+  ]
+}
